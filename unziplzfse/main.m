@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SSZipArchive/SSZipArchive.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+        [SSZipArchive unzipFileAtPath:[NSString stringWithUTF8String:argv[1]] toDestination:[NSString stringWithUTF8String:argv[2]]];
     }
     return 0;
 }
