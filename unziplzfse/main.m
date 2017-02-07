@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
             return -1;
         }
         NSString *srcPath = [NSString stringWithUTF8String:argv[1]];
-        NSString *dstPath = argc > 2 ? [NSString stringWithUTF8String:argv[2]] : @".";
+        NSString *dstPath = argc > 2 ? [NSString stringWithUTF8String:argv[2]] : [[NSString stringWithUTF8String:argv[1]] stringByDeletingPathExtension];
         [SSZipArchive unzipFileAtPath:srcPath
                         toDestination:dstPath
                       progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {

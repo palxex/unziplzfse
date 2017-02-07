@@ -8,8 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		A3092B808468169DC6EBF1E9 /* libPods-unziplzfse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB73ED4F312E39A16B03725 /* libPods-unziplzfse.a */; };
+		C622BE4B1E45F0DE000C8970 /* liblzfse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C622BE461E45F026000C8970 /* liblzfse.a */; };
 		C6E362EE1E45C21700B0D681 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E362ED1E45C21700B0D681 /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C622BE451E45F026000C8970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C622BE3F1E45F026000C8970 /* lzfse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B57822C1B8BC12F002F950F;
+			remoteInfo = "lzfse lib";
+		};
+		C622BE471E45F026000C8970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C622BE3F1E45F026000C8970 /* lzfse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B1AF7D21B8D0EBF005BF60D;
+			remoteInfo = "lzfse command";
+		};
+		C622BE491E45F031000C8970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C622BE3F1E45F026000C8970 /* lzfse.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B57822B1B8BC12F002F950F;
+			remoteInfo = "lzfse lib";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C6E362E81E45C21700B0D681 /* CopyFiles */ = {
@@ -26,6 +51,8 @@
 /* Begin PBXFileReference section */
 		716B2BBA6C9FE25D00887E4B /* Pods-unziplzfse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unziplzfse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unziplzfse/Pods-unziplzfse.debug.xcconfig"; sourceTree = "<group>"; };
 		7FF0F78881DDD3550EB5E960 /* Pods-unziplzfse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unziplzfse.release.xcconfig"; path = "Pods/Target Support Files/Pods-unziplzfse/Pods-unziplzfse.release.xcconfig"; sourceTree = "<group>"; };
+		C622BE3D1E45EF66000C8970 /* liblzfse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblzfse.a; path = lzfse/build/Debug/liblzfse.a; sourceTree = "<group>"; };
+		C622BE3F1E45F026000C8970 /* lzfse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lzfse.xcodeproj; path = lzfse/lzfse.xcodeproj; sourceTree = "<group>"; };
 		C6E362EA1E45C21700B0D681 /* unziplzfse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unziplzfse; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E362ED1E45C21700B0D681 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEB73ED4F312E39A16B03725 /* libPods-unziplzfse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unziplzfse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C622BE4B1E45F0DE000C8970 /* liblzfse.a in Frameworks */,
 				A3092B808468169DC6EBF1E9 /* libPods-unziplzfse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,14 +83,25 @@
 		8556FC8CB5694B0CD039FD4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C622BE3D1E45EF66000C8970 /* liblzfse.a */,
 				DEB73ED4F312E39A16B03725 /* libPods-unziplzfse.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C622BE401E45F026000C8970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C622BE461E45F026000C8970 /* liblzfse.a */,
+				C622BE481E45F026000C8970 /* lzfse */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C6E362E11E45C21700B0D681 = {
 			isa = PBXGroup;
 			children = (
+				C622BE3F1E45F026000C8970 /* lzfse.xcodeproj */,
 				C6E362EC1E45C21700B0D681 /* unziplzfse */,
 				C6E362EB1E45C21700B0D681 /* Products */,
 				1928CDB39B74413E98BAA603 /* Pods */,
@@ -102,6 +141,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C622BE4A1E45F031000C8970 /* PBXTargetDependency */,
 			);
 			name = unziplzfse;
 			productName = unziplzfse;
@@ -133,12 +173,35 @@
 			mainGroup = C6E362E11E45C21700B0D681;
 			productRefGroup = C6E362EB1E45C21700B0D681 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C622BE401E45F026000C8970 /* Products */;
+					ProjectRef = C622BE3F1E45F026000C8970 /* lzfse.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C6E362E91E45C21700B0D681 /* unziplzfse */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C622BE461E45F026000C8970 /* liblzfse.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblzfse.a;
+			remoteRef = C622BE451E45F026000C8970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C622BE481E45F026000C8970 /* lzfse */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lzfse;
+			remoteRef = C622BE471E45F026000C8970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		064E2D61BBED1BB33CF79267 /* [CP] Copy Pods Resources */ = {
@@ -183,6 +246,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C622BE4A1E45F031000C8970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "lzfse lib";
+			targetProxy = C622BE491E45F031000C8970 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C6E362EF1E45C21700B0D681 /* Debug */ = {
@@ -276,6 +347,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 716B2BBA6C9FE25D00887E4B /* Pods-unziplzfse.debug.xcconfig */;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lzfse/build/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -284,6 +359,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FF0F78881DDD3550EB5E960 /* Pods-unziplzfse.release.xcconfig */;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lzfse/build/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -307,6 +386,7 @@
 				C6E362F31E45C21700B0D681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

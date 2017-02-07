@@ -1,0 +1,2 @@
+target 'unziplzfse'
+pod 'SSZipArchive'
